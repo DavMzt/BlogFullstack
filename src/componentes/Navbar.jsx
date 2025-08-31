@@ -1,4 +1,7 @@
 import { useState } from "react"
+//import {IKImage} from '@imagekit/react';
+//import { IKImage } from "imagekitio-react";
+import Image from "./image";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -9,7 +12,7 @@ const Navbar = () => {
 
             {/* Implementar imagen de logo (alch pondre algo random xd). */}
             <div className='flex items-center gap-4 text-2xl font-bold'>
-                <img src="/Wdgaster.png" className="w-10 h-15" alt=''/>
+                <Image src="Wdgaster.png" alt="Dav Logo" w={32} h={32}/>
                 <span>DAVBLOG</span>
             </div>
 
