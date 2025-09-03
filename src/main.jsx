@@ -5,8 +5,7 @@ import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link
+
 } from "react-router-dom"
 import Homepage from './Routes/Homepage.jsx'
 import ListaPost from './Routes/ListaPost.jsx'

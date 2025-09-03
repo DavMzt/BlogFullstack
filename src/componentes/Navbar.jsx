@@ -36,7 +36,7 @@ const Navbar = () => {
             {/* Menu de PC*/}
 
              <div className='hidden md:flex items-center gap-8 xl:gap-12 font-medium'>
-             <Link to="/">Inicio</Link>
+            <Link to="/">Inicio</Link>
              <Link to="/">Tendencia</Link>
              <Link to="/">Recientes</Link>
              <Link to="/">Acerca de</Link>
