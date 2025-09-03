@@ -2,6 +2,7 @@ import { useState } from "react"
 //import {IKImage} from '@imagekit/react';
 //import { IKImage } from "imagekitio-react";
 import Image from "./image";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -11,10 +12,10 @@ const Navbar = () => {
 
 
             {/* Implementar imagen de logo (alch pondre algo random xd). */}
-            <div className='flex items-center gap-4 text-2xl font-bold'>
+            <Link to='' className='flex items-center gap-4 text-2xl font-bold'>
                 <Image src="Wdgaster.png" alt="Dav Logo" w={32} h={32}/>
                 <span>DAVBLOG</span>
-            </div>
+            </Link>
 
             {/* Menu para celular y para pc*/}
             {/* boton del menu*/}
@@ -24,22 +25,22 @@ const Navbar = () => {
                 </div>
                 {/* Menu de celular*/}
                 <div className={`w-full h-screen flex flex-col items-center justify-center gap-8 font-medium text-lg absolute top-16 bg-white  transition-all ease-in-out ${open ? "-right-0" : "-right-[100%]"}`}>
-                     <a href="/">Inicio</a>
-             <a href="/">Tendencia</a>
-             <a href="/">Recientes</a>
-             <a href="/">Acerca de</a>
-             <a href=""><button className="py-2 px-4 rounded-3xl bg-blue-900 text-white">Iniciar Sesion XD</button></a>
+             <Link to="/">Inicio</Link>
+             <Link to="/">Tendencia</Link>
+             <Link to="/">Recientes</Link>
+             <Link to="/">Acerca de</Link>
+             <Link to=""><button className="py-2 px-4 rounded-3xl bg-blue-900 text-white">Iniciar Sesion XD</button></Link>
                     </div>
 
             </div>
             {/* Menu de PC*/}
 
              <div className='hidden md:flex items-center gap-8 xl:gap-12 font-medium'>
-             <a href="/">Inicio</a>
-             <a href="/">Tendencia</a>
-             <a href="/">Recientes</a>
-             <a href="/">Acerca de</a>
-             <a href=""><button className="py-2 px-4 rounded-3xl bg-blue-900 text-white">Iniciar Sesion XD</button></a>
+             <Link to="/">Inicio</Link>
+             <Link to="/">Tendencia</Link>
+             <Link to="/">Recientes</Link>
+             <Link to="/">Acerca de</Link>
+             <Link to=""><button className="py-2 px-4 rounded-3xl bg-blue-900 text-white">Iniciar Sesion XD</button></Link>
 
              </div>
 
