@@ -3,6 +3,7 @@ import { useState } from "react"
 //import { IKImage } from "imagekitio-react";
 import Image from "./image";
 import { Link } from "react-router-dom";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -40,7 +41,13 @@ const Navbar = () => {
              <Link to="/">Tendencia</Link>
              <Link to="/">Recientes</Link>
              <Link to="/">Acerca de</Link>
-             <Link to=""><button className="py-2 px-4 rounded-3xl bg-blue-900 text-white">Iniciar Sesion XD</button></Link>
+              <SignedOut>
+              <Link to="/login"><button className="py-2 px-4 rounded-3xl bg-blue-900 text-white">Iniciar Sesion XD</button></Link>
+                
+            </SignedOut>
+            <SignedIn>
+            <UserButton />
+            </SignedIn>
 
              </div>
 

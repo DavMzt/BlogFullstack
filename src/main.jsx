@@ -13,6 +13,15 @@ import Login from './Routes/Login.jsx'
 import Registro from './Routes/Registro.jsx'
 import PostSolo from './Routes/PostSolo.jsx'
 import MainLayout from './layouts/MainLayout.jsx'
+import { ClerkProvider } from '@clerk/clerk-react'
+
+
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error('Missing Publishable Key')
+}
+
 
 
 const router = createBrowserRouter([{
@@ -49,6 +58,8 @@ children:[
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
     <RouterProvider router={router} />
+    </ClerkProvider>
   </StrictMode>,
 )
