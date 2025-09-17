@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import MainCategories from "../componentes/MainCategories"
 
 const Homepage = () => {
     return (
@@ -56,7 +57,7 @@ const Homepage = () => {
 
 </div>
 
-
+<MainCategories/>
 
         </div>
 
